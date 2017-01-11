@@ -50,15 +50,25 @@ $(".jump_comment").on('click', function() {
   jump();
 });
 
-
-$(function () {
+if(!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
+  $(function () {
     $("#catch_title").animate({
         left: "35%"
     }, 2250).animate({
         left: "100%"
     }, 1800)
-});
+  });
+}
 
+if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
+  $(function(){
+    $("#catch_title").animate({
+      top: "45%"
+    }, 2250).animate({
+      top: "100%"
+    }, 1800)
+  });
+}
 
 
 $(function() {
